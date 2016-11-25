@@ -9,5 +9,7 @@ from selenium import webdriver
 driver= webdriver.Chrome('C:\\Users\\HariTeja\\Downloads\\chromedriver_win32\\chromedriver.exe')
 driver.get("https://store.nest.com/")
 driver.maximize_window()
-links=driver.find_elements_by_tag_name("a href")
-print(links.__sizeof__()) 
+links=driver.find_elements_by_tag_name("a")
+print(len(links))
+for a in links :
+ print(a.text)
